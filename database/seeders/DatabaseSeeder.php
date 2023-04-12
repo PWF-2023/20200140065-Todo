@@ -39,6 +39,23 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
+        User::create
+        (
+            [
+                'name' => 'Farid',
+                
+                'email' => 'faridgilang20050@gmail.com',
+                
+                'email_verified_at' => now(),
+                
+                'password' => '$2y$10$oMgQJpZ6CgHLx1fNbhYlpudhRlcImX2Oamdf3nQlb7QsG5C3jM3/i',
+
+                'remember_token' => Str::random(10),
+
+                'is_admin' => false
+            ]
+        );
+
         User::factory(100)->create();
 
         Todo::factory(500)->create();
