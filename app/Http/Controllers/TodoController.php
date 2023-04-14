@@ -56,9 +56,17 @@ class TodoController extends Controller
         // ])
 
         // Eloquent Way - Readable
-        $todo = Todo::create([
+        // $todo = Todo::create([
+        //     'title' => ucfirst($request->title),
+        //     'user_id' => auth()->user()->id,
+        // ]);
+
+        // Eloquent Way - Shortest
+        // $request->user()->todos()->create($request->all());
+        $request->user()->todos()->create([
+
             'title' => ucfirst($request->title),
-            'user_id' => auth()->user()->id,
+
         ]);
         return redirect()->route('todo.index')->with('success', 'Todo created successfully!');
     }
