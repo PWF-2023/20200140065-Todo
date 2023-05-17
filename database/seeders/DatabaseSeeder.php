@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         User::create
         (
             [
-                'name' => 'Admin',
+                'name' => 'Muhammad Farid Gilang Nuswantoro',
                 
                 'email' => 'admin@admin.com',
                 
@@ -42,7 +42,7 @@ class DatabaseSeeder extends Seeder
         User::create
         (
             [
-                'name' => 'Farid',
+                'name' => 'Farid Dummy',
                 
                 'email' => 'faridgilang20050@gmail.com',
                 

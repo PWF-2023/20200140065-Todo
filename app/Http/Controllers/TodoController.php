@@ -45,6 +45,11 @@ class TodoController extends Controller
             return redirect()->route('todo.index')->with('danger', 
             'You are not authorized to edit this todo!');
         }
+
+        if (auth()->user()->id = $todo->user_id) {
+            return view ('todo.edit', compact('todo'));
+        }
+        return redirect()-> route('todo.index')->with('danger', 'You are not authorized to complete this todo!');
     }
 
     public function update(Request $request, Todo $todo)
